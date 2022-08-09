@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Header from "./components/header/Header";
+import BestOfHealth from "./components/best-of-health/BestOfHealth";
+import Knowledge from "./components/knowledge/Knowledge";
+import HomeCare from "./components/home-care/HomeCare";
+
+const AppWraper = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWraper>
+      <Header />
+      <BestOfHealth />
+      <Knowledge />
+      <HomeCare />
+    </AppWraper>
   );
 }
 
