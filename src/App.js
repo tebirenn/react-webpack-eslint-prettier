@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import Header from "./components/header/Header";
-import BestOfHealth from "./components/best-of-health/BestOfHealth";
-import Knowledge from "./components/knowledge/Knowledge";
-import HomeCare from "./components/home-care/HomeCare";
+import BestOfHealth from './components/best-of-health/BestOfHealth';
+import Header from './components/header/Header';
+import HomeCare from './components/home-care/HomeCare';
+import Knowledge from './components/knowledge/Knowledge';
+import React from 'react';
+import styled from 'styled-components';
 
 const AppWraper = styled.div`
   width: 100vw;

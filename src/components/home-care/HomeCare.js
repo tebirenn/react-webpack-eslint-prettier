@@ -1,14 +1,9 @@
-import React from "react";
-import {
-  HomeCareStyle,
-  HomeCareArrow,
-  HomeCareItems,
-  HomeCareItem,
-} from "./homeCareStyle";
-import arrowRight from "../../images/arrow_right_icon.svg";
-import icon1 from "../../images/icon-1.png";
-import icon2 from "../../images/icon-2.png";
-import icon3 from "../../images/icon-3.png";
+import React from 'react';
+import {HomeCareStyle, HomeCareArrow, HomeCareItems, HomeCareItem} from './homeCareStyle';
+import arrowRight from '../../images/arrow_right_icon.svg';
+import icon1 from '../../images/icon-1.png';
+import icon2 from '../../images/icon-2.png';
+import icon3 from '../../images/icon-3.png';
 
 function HomeCare() {
   return (
@@ -24,7 +19,7 @@ function HomeCare() {
             experts <br />
           </h2>
         </HomeCareItem>
-        <HomeCareItem style={{ backgroundColor: "#1becde" }}>
+        <HomeCareItem style={{backgroundColor: '#1becde'}}>
           <img src={icon2} alt="" />
           <h2>
             Avalible <br />
@@ -42,7 +37,7 @@ function HomeCare() {
 
       <button>
         Get A Quote
-        <HomeCareArrow src={arrowRight} alt="" style={{ width: "18px" }} />
+        <HomeCareArrow src={arrowRight} alt="" style={{width: '18px'}} />
       </button>
     </HomeCareStyle>
   );

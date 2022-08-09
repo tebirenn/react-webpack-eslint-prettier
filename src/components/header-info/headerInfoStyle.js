@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderInfoStyle = styled.div`
   background-color: transparent;
@@ -61,8 +61,7 @@ export const SliderButton = styled.button`
   &:hover {
     border: 4px solid #4bc5b8;
     img {
-      filter: invert(64%) sepia(53%) saturate(397%) hue-rotate(124deg)
-        brightness(94%) contrast(96%);
+      filter: invert(64%) sepia(53%) saturate(397%) hue-rotate(124deg) brightness(94%) contrast(96%);
     }
   }
 `;

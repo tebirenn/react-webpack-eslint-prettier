@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import styled, { createGlobalStyle } from "styled-components";
+import App from './App';
+import style from './index.css';
+import styled, {createGlobalStyle} from 'styled-components';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
 
 const Global = createGlobalStyle`
   * {
@@ -12,13 +12,13 @@ const Global = createGlobalStyle`
     box-sizing: border-box;
     font-family: Poppins, sans-serif;
   }
-`,
-  root = ReactDOM.createRoot(document.getElementById("root"));
+`;
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Global />
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+      <Global />
+      <App />
+    </React.StrictMode>,
 );
 
 /*

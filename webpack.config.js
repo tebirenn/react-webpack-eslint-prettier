@@ -5,21 +5,20 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const webpack = require("webpack");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
-
-const plugins = [
-  new MiniCssExtractPlugin({
-    filename: "main.css",
-    chunkFilename: "main.css",
-  }),
-  new HTMLWebpackPlugin({
-    template: "./public/index.html",
-  }),
-  new CleanWebpackPlugin(),
-  new MiniCssExtractPlugin({
-    filename: "[name].css",
-  }),
-];
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"),
+  plugins = [
+    new MiniCssExtractPlugin({
+      filename: "main.css",
+      chunkFilename: "main.css",
+    }),
+    new HTMLWebpackPlugin({
+      template: "./public/index.html",
+    }),
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+  ];
 
 if (process.env.SERVE) {
   // Используем плагин только если запускаем devServer
@@ -42,17 +41,17 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/, // не обрабатываем файлы из node_modules
+        exclude: /node_modules/, // Не обрабатываем файлы из node_modules
         use: {
           loader: "babel-loader",
           options: {
             cacheDirectory: true, // Использование кэша для избежания рекомпиляции
-            // при каждом запуске
+            // При каждом запуске
           },
         },
       },
       {
-        test: /\.jsx?$/, // обновляем регулярное выражение для поддержки jsx
+        test: /\.jsx?$/, // Обновляем регулярное выражение для поддержки jsx
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -94,8 +93,10 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      // Для webpack @ 5 вы можете использовать синтаксис `...` для расширения существующих минимизаторов (например, `terser-webpack-plugin`), раскомментируйте следующую строку
-      // `...`,
+      /*
+       * Для webpack @ 5 вы можете использовать синтаксис `...` для расширения существующих минимизаторов (например, `terser-webpack-plugin`), раскомментируйте следующую строку
+       * `...`,
+       */
       new CssMinimizerPlugin(),
     ],
   },

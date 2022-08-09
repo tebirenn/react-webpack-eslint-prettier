@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import bg from "../../images/knowledge-bg.png";
+import styled from 'styled-components';
+import bg from '../../images/knowledge-bg.png';
 
 export const KnowledgeStyle = styled.div`
   background-image: url(${bg});
